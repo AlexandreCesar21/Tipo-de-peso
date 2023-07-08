@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 * {
-    
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: aqua;
+    
 }
 
 table {
     border-collapse: collapse;
     padding: 10px;
+    
 }
 
 th {
@@ -20,4 +27,51 @@ tr {
 td {
     border: 2px solid black;
     padding: 10px;
+    text-align: center;
+    
+}
+
+
+.titulo {
+    background-color: white;
+}
+
+.pesobaixo {
+    background-color: #94B5D7;
+}
+
+.pesonormal {
+    background-color: #8FC69F;
+}
+
+.sobrepeso{
+    background-color: #FAD647;
+}
+
+.obesidadegrauI {
+    background-color: #E4975D;
+}
+
+.obesidadegrauII {
+    background-color: #F5501F;
+}
+
+.obesidadegrauIII {
+    background-color: #D65B5C;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 440px;
+}
+
+
+
+div {
+    text-align: center;
+    margin-left: 500px;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
 }

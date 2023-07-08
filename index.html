@@ -7,44 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Testando</h1>
-    <div>
-        <input type="number" name="" id="">
-        <input type="number" name="" id="">
-        <input type="button" value="Testando">
-    </div>
-    <div id="res">
+    <h1>Descubra o seu tipo de peso!</h1>
 
+    <div>
+        <p>Digite o seu peso e sua altura.</p>
+        Peso:<input type="number" name="peso" id="peso">
+        <br>
+        <br>
+        Altura:<input type="number" name="altura" id="altura">
+        <br>
+        <br>
+        <input type="button" value="Verificar">
+    </div>
+    <br>
+    <br>
+    <div id="res">
+        <h2>Relatório </h2>
     </div>
     <table>
         <thead>
-            <th scope="col">Tipo de peso</th>
-            <th>Kg</th>
+            <th scope="col" class="titulo">Tipo de peso</th>
+            <th scope="col" class="titulo">Kg</th>
         </thead>
         <tbody>
             <tr>
-                <td>Abaixo do peso</td>
-                <td>18,5</td>
+                <td class="pesobaixo">Abaixo do peso</td>
+                <td class="pesobaixo">18,5</td>
             </tr>
             <tr>
-                <td>Peso normal</td>
-                <td>18,5 e 24,9</td>
+                <td class="pesonormal">Peso normal</td>
+                <td class="pesonormal">18,5 e 24,9</td>
             </tr>
             <tr>
-                <td>Sobrepeso</td>
-                <td>25 e 34,99</td>
+                <td class="sobrepeso">Sobrepeso</td>
+                <td class="sobrepeso">25 e 34,99</td>
             </tr>
             <tr>
-                <td>Obesidade grau I</td>
-                <td>30 e 34,99</td>
+                <td class="obesidadegrauI">Obesidade grau I</td>
+                <td class="obesidadegrauI">30 e 34,99</td>
             </tr>
             <tr>
-                <td>Obesidade grau II (Servera)</td>
-                <td>35 e 39,99</td>
+                <td class="obesidadegrauII">Obesidade grau II (Servera)</td>
+                <td class="obesidadegrauII">35 e 39,99</td>
             </tr>
             <tr>
-                <td>Obesidade grau III (Mórbida)</td>
-                <td>Acima de 40</td>
+                <td class="obesidadegrauIII">Obesidade grau III (Mórbida)</td>
+                <td class="obesidadegrauIII">Acima de 40</td>
             </tr>
         </tbody>
     </table>

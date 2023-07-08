@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Descubra o seu tipo de peso!</h1>
-
     <div>
         <p>Digite o seu peso e sua altura.</p>
         Peso:<input type="number" name="peso" id="peso">
@@ -17,12 +16,13 @@
         Altura:<input type="number" name="altura" id="altura">
         <br>
         <br>
-        <input type="button" value="Verificar">
+        <input type="button" value="Verificar" id="verificar">
     </div>
     <br>
     <br>
     <div id="res">
-        <h2>Relatório </h2>
+        <p id="resultado"></p>
+        <img id="imagem" src="" alt="">
     </div>
     <table>
         <thead>
@@ -56,5 +56,26 @@
             </tr>
         </tbody>
     </table>
+    <script>
+        document.querySelector("#verificar").addEventListener("click", function(){
+            const peso = parseFloat(document.querySelector("#peso").value.replace(",","."))
+            const altura = parseFloat(document.querySelector("#altura").value.replace(",", ".")) / 100;
+            const img = document.createElement("img")
+            const expoente = 2
+            let resul = 0
+            const res = document.querySelector("#resultado")
+            resul = peso / (altura ** expoente)
+            if(resul <= 18.5){
+                img.setAttribute("src", "baixopeso.png")
+                img.style.display = "block"
+                res.innerHTML = "peso baixo"
+            }else {
+                img.setAttribute("src", "");
+                img.style.display = "none";
+                res.innerHTML = "";
+            }
+            
+        })
+    </script>
 </body>
 </html>

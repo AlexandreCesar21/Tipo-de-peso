@@ -1,5 +1,16 @@
-@media (min-width: 768px){
+@media (max-width: 600px){
     h1 {
-        padding: 10px
+        font-size: 2em;
+        margin-left: 5px;
+    }
+
+    div {
+        font-size: 1em;
+        margin-left: 5px;
+    }
+    
+    table {
+        margin-top: 15px;
+        margin-left: 45px;
     }
 }

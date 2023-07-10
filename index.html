@@ -21,8 +21,7 @@
     <br>
     <br>
     <div id="res">
-        <p id="resultado"></p>
-        <img id="imagem" src="" alt="">
+        <h2>Rélatorio</h2>
     </div>
     <table>
         <thead>
@@ -59,20 +58,18 @@
     <script>
         document.querySelector("#verificar").addEventListener("click", function(){
             const peso = parseFloat(document.querySelector("#peso").value.replace(",","."))
-            const altura = parseFloat(document.querySelector("#altura").value.replace(",", ".")) / 100;
+            const altura = parseFloat(document.querySelector("#altura").value.replace(",", "."))
             const img = document.createElement("img")
             const expoente = 2
             let resul = 0
-            const res = document.querySelector("#resultado")
+            const res = document.querySelector("#res")
             resul = peso / (altura ** expoente)
             if(resul <= 18.5){
                 img.setAttribute("src", "baixopeso.png")
-                img.style.display = "block"
                 res.innerHTML = "peso baixo"
+                res.appendChild(img)
             }else {
-                img.setAttribute("src", "");
-                img.style.display = "none";
-                res.innerHTML = "";
+                res.innerHTML = resul.toString();
             }
             
         })

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tipo de peso</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <style>
+        @media (min-width: 600px){
+        h1 {
+            margin-left: 1000px;
+        }
+    }
+    </style>
 </head>
 <body>
     <h1>Descubra o seu tipo de peso!</h1>
@@ -21,7 +29,7 @@
     <br>
     <br>
     <div id="res">
-        <h2>Rélatorio</h2>
+        <h2>Relatório</h2>
     </div>
     <table>
         <thead>
@@ -60,14 +68,20 @@
             const peso = parseFloat(document.querySelector("#peso").value.replace(",","."))
             const altura = parseFloat(document.querySelector("#altura").value.replace(",", "."))
             const img = document.createElement("img")
+            const h3 = document.createElement("h3")
+            const h2 = document.createElement("h2")
             const expoente = 2
             let resul = 0
             const res = document.querySelector("#res")
             resul = peso / (altura ** expoente)
             if(resul <= 18.5){
                 img.setAttribute("src", "baixopeso.png")
-                res.innerHTML = "peso baixo"
+                h3.textContent = "Abaixo do peso"
+                h2.textContent = resul + "Kg"
+
                 res.appendChild(img)
+                res.appendChild(h3)
+                res.appendChild(h2)
             }else {
                 res.innerHTML = resul.toString();
             }

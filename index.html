@@ -107,10 +107,15 @@
                 res.appendChild(img)
                 res.appendChild(h3)
                 res.appendChild(h2)
-            }
-            else {
-                res.innerHTML = resul.toFixed(2);
-            }
+            } else {
+                img.setAttribute("src", "obesidade grau III (mórbida).png")
+                h3.textContent = "Obesidade grau III (Mórbida)"
+                h2.textContent = resul.toFixed(2) + "Kg"
+
+                res.appendChild(img)
+                res.appendChild(h3)
+                res.appendChild(h2)
+            } 
             
         })
     </script>

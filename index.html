@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td class="sobrepeso">Sobrepeso</td>
-                <td class="sobrepeso">25 e 34,99</td>
+                <td class="sobrepeso">25 e 29,99</td>
             </tr>
             <tr>
                 <td class="obesidadegrauI">Obesidade grau I</td>
@@ -75,7 +75,40 @@
                 res.appendChild(img)
                 res.appendChild(h3)
                 res.appendChild(h2)
-            }else {
+            }else if(resul <= 24.5) {
+                img.setAttribute("src", "pesonormal.png")
+                h3.textContent = "Peso normal"
+                h2.textContent = resul.toFixed(2) + "Kg"
+
+                res.appendChild(img)
+                res.appendChild(h3)
+                res.appendChild(h2)
+            } else if(resul <= 29.99){
+                img.setAttribute("src", "sobrepeso.png")
+                h3.textContent = "Sobrepeso"
+                h2.textContent = resul.toFixed(2) + "Kg"
+
+                res.appendChild(img)
+                res.appendChild(h3)
+                res.appendChild(h2)
+            } else if(resul <= 34.99){
+                img.setAttribute("src", "obesidade grau I.png")
+                h3.textContent = "Obesidade grau I"
+                h2.textContent = resul.toFixed(2) + "Kg"
+
+                res.appendChild(img)
+                res.appendChild(h3)
+                res.appendChild(h2)
+            } else if(resul <= 39.99){
+                img.setAttribute("src", "obsidadeII.png")
+                h3.textContent = "Obesidade II (Servera)"
+                h2.textContent = resul.toFixed(2) + "Kg"
+
+                res.appendChild(img)
+                res.appendChild(h3)
+                res.appendChild(h2)
+            }
+            else {
                 res.innerHTML = resul.toFixed(2);
             }
             
